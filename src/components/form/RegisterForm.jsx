@@ -98,7 +98,6 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
             {emailVerificationRequested && (
               <p className="text-green-500 text-xs mt-1">이메일 인증 요청이 전송되었습니다.</p>
             )}
-
             {emailVerificationRequested && (
               <div className="flex mb-2">
                 <input
@@ -129,7 +128,12 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
                   placeholder="'-'를 제외하고 입력해주세요"
                   className="w-full px-3 py-2 border border-gray-300 rounded-l"
                   {...register('phone', { required: '전화번호를 입력해주세요.' })}
-                  onKeyDown={e => handleKeyPress(e, handlePhoneVerificationRequest)}
+                  onKeyDown={e =>
+                    handleKeyPress(e, () => {
+                      handlePhoneVerificationRequest(e);
+                      setPhoneVerificationRequested(true);
+                    })
+                  }
                 />
                 <button
                   type="button"
@@ -139,6 +143,9 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
                 </button>
               </div>
               {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
+              {phoneVerificationRequested && (
+                <p className="text-green-500 text-xs mt-1">전화번호 인증 요청이 전송되었습니다.</p>
+              )}
               {phoneVerificationRequested && (
                 <div className="flex mb-4">
                   <input
