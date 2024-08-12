@@ -7,8 +7,8 @@ export default function Dashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태 관리
 
   return (
-    <div className="w-[90%] m-[3%]">
-      <div className="flex flex-col mt-40px mb-[250px]">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col mt-40px mb-[250px] w-[1400px]">
         <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">이달의 Pick !</h1>
@@ -21,7 +21,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-40px mb-[250px]">
+      <div className="flex flex-col mt-40px mb-[250px] w-[1400px]">
         <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">Finder's Pick !</h1>
@@ -45,7 +45,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-40px mb-[250px]">
+      <div className="flex flex-col mt-40px mb-[250px] w-[1400px]">
         <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">요즘 뜨는 맛집</h1>

@@ -8,7 +8,7 @@ test('renders App Dashboard link', () => {
       <App />
     </MemoryRouter>
   );
-  const linkElement = screen.getByText(/Welcome to the dashboard!/i);
+  const linkElement = screen.getByText(/이달의/i);
   expect(linkElement).toBeInTheDocument();
 });
 

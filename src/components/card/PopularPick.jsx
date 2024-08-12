@@ -26,7 +26,7 @@ export default function PopularPick() {
         </div>
         <Link to={goToBoard} className="hover:underline">
           <div className="flex ml-[25px] mt-40px text-18px">
-            <FontAwesomeIcon icon={faClipboard} className="text-32px" />
+            <FontAwesomeIcon icon={faClipboard} className="text-[1.5rem]" />
             <div className="flex mt-[3px]">
               <p className="font-bold ml-10px mr-[5px]">관련 게시글</p>
               <p className="mr-[5px]">:</p>
@@ -35,7 +35,7 @@ export default function PopularPick() {
           </div>
         </Link>
         <div className="flex ml-[25px] mt-20px text-18px">
-          <FontAwesomeIcon icon={faThumbsUp} className="text-32px" />
+          <FontAwesomeIcon icon={faThumbsUp} className="text-[1.5rem]" />
           <div className="flex mt-[3px]">
             <p className="font-bold ml-10px mr-[5px]">좋아요</p>
             <p className="mr-[5px]">:</p>
