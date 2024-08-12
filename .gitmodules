@@ -1,0 +1,3 @@
+[submodule "client-dotenv"]
+	path = client-dotenv
+	url = https://github.com/caterpillar-butler/client-dotenv.git
