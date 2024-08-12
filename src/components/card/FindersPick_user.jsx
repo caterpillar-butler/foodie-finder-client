@@ -14,7 +14,7 @@ export default function FindersPick() {
         <div
           className="w-270 h-[500px] bg-white border border-gray-300 m-10px rounded-[10px]"
           style={{ boxShadow: '10px 10px 0px rgba(220, 220, 220, 1)' }}>
-          <h3 className="text-20px font-bold m-4 flex justify-center">파인더 'OOO'님의 추천</h3>
+          <h3 className="text-20px font-bold m-4 flex justify-center">파인더 'XXX'님의 추천</h3>
           <div className="flex justify-center">
             <Img
               src={
