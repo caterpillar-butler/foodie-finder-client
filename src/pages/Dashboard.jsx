@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className="w-[90%] m-[3%]">
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex ml-[6%]">
+        <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">이달의 Pick !</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
+        <div className="flex flex-row justify-around items-center w-full">
           <MonthPick />
           <MonthPick />
           <MonthPick />
@@ -20,11 +20,11 @@ export default function Dashboard() {
       </div>
 
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex ml-[6%]">
+        <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">Finder's Pick !</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
+        <div className="flex flex-row justify-around items-center w-full">
           <FindersPick />
           <FindersPick />
           <FindersPick />
@@ -33,11 +33,11 @@ export default function Dashboard() {
       </div>
 
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex ml-[6%]">
+        <div className="flex ml-[30px]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">요즘 뜨는 맛집</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
+        <div className="flex flex-row justify-around items-center w-full">
           <PopularPick />
           <PopularPick />
           <PopularPick />

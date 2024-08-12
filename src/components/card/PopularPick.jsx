@@ -15,7 +15,7 @@ export default function PopularPick() {
     <div className="flex justify-center">
       <div
         className="w-270 h-450 bg-white border border-gray-300 m-10px rounded-[10px] transform transition-transform duration-300 hover:scale-110"
-        style={{ boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.3)' }}>
+        style={{ boxShadow: '10px 10px 0px rgba(220, 220, 220, 1)' }}>
         <h3 className="text-20px font-bold m-6">대구 삼덕동 OOO</h3>
         <div className="flex justify-center">
           <Img
