@@ -7,11 +7,11 @@ export default function Dashboard() {
   return (
     <div>
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex">
+        <div className="flex ml-[6%]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">이달의 Pick !</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-full">
+        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
           <MonthPick />
           <MonthPick />
           <MonthPick />
@@ -20,11 +20,11 @@ export default function Dashboard() {
       </div>
 
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex">
+        <div className="flex ml-[6%]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">Finder's Pick !</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-full">
+        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
           <FindersPick />
           <FindersPick />
           <FindersPick />
@@ -33,11 +33,11 @@ export default function Dashboard() {
       </div>
 
       <div className="flex flex-col mt-40px mb-[250px]">
-        <div className="flex">
+        <div className="flex ml-[6%]">
           <FontAwesomeIcon icon={faCircleCheck} color="orange" className="text-[45px] ml-[30px]" />
           <h1 className="text-32px font-bold mb-4 ml-10px ">요즘 뜨는 맛집</h1>
         </div>
-        <div className="flex flex-row justify-around items-center w-full">
+        <div className="flex flex-row justify-around items-center w-[90%] mx-auto">
           <PopularPick />
           <PopularPick />
           <PopularPick />
