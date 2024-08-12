@@ -3,7 +3,7 @@ import { requestPhoneVerification, verifyPhoneCode, requestEmailVerification, ve
 
 export default function RegisterForm({ register, handleSubmit, watch, errors }) {
   const [emailVerificationRequested, setEmailVerificationRequested] = useState(false);
-  const [emailVerified, setEmailVerified] = useState(false);
+  const [emailVerified, setEmailVerified] = useState(true);
   const [phoneVerificationRequested, setPhoneVerificationRequested] = useState(false);
   const [phoneVerified, setPhoneVerified] = useState(false);
   const [emailVerificationError, setEmailVerificationError] = useState('');
@@ -16,6 +16,11 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
 
   const handleEmailVerificationRequest = async e => {
     e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        setEmailVerificationError('유효한 이메일 주소를 입력해주세요.');
+        return;
+    }
     try {
       await requestEmailVerification(email);
       setEmailVerificationRequested(true);
@@ -38,6 +43,10 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
 
   const handlePhoneVerificationRequest = async e => {
     e.preventDefault();
+    if (!/^\d{10,11}$/.test(phone)) {
+      setPhoneVerificationError('전화번호는 10자리 또는 11자리 숫자여야 합니다.');
+      return;
+    }
     try {
       await requestPhoneVerification(phone);
       setPhoneVerificationRequested(true);
@@ -49,6 +58,10 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
 
   const handlePhoneVerificationCode = async e => {
     e.preventDefault();
+    if (!/^\d{6}$/.test(phoneVerificationCode)) {
+      setPhoneVerificationError('인증 코드는 6자리 숫자여야 합니다.');
+      return;
+    }
     try {
       await verifyPhoneCode(phone, phoneVerificationCode);
       setPhoneVerified(true);
@@ -83,7 +96,7 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
                 onKeyDown={e =>
                   handleKeyPress(e, () => {
                     handleEmailVerificationRequest(e);
-                    setEmailVerificationRequested(true);
+                    // setEmailVerificationRequested(true);
                   })
                 }
               />
@@ -131,7 +144,7 @@ export default function RegisterForm({ register, handleSubmit, watch, errors }) 
                   onKeyDown={e =>
                     handleKeyPress(e, () => {
                       handlePhoneVerificationRequest(e);
-                      setPhoneVerificationRequested(true);
+                      // setPhoneVerificationRequested(true);
                     })
                   }
                 />
