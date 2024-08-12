@@ -8,6 +8,8 @@ export default function Layout({ children }) {
     switch (location.pathname) {
       case '/register':
         return <RegisterHeader />;
+      case '/myPage':
+        return <RegisterHeader />;
       default:
         return <DashBoardHeader />;
     }
@@ -16,7 +18,9 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       {renderHeader()}
-      <main className="flex-grow p-4">{children}</main>
+      <main className={`flex-grow ${location.pathname === '/myPage' ? '' : 'p-4'}`}>
+        {children}
+      </main>
       <Footer />
     </div>
   );
