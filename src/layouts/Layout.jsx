@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   const location = useLocation();
 
   const renderHeader = () => {
-    if (location.pathname === '/register' || location.pathname === '/login') {
+    if (location.pathname === '/register' || location.pathname === '/login' || location.pathname === '/mypage') {
       return <RegisterHeader />;
     }
     return <DashBoardHeader />;
