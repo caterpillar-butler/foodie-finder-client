@@ -8,3 +8,4 @@ export { default as FindersPick } from './card/FindersPick';
 export { default as MonthPick } from './card/MonthPick';
 export { default as PopularPick } from './card/PopularPick';
 export { default as FindersPick_user } from './card/FindersPick_user';
+export { default as MyPagebar } from './mypage/MyPagebar';
