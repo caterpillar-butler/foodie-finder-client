@@ -1,10 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { MyPagebar } from 'components';
+import { Follower, MyPagebar, ProfileMenu } from 'components';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Mypage() {
-    return (
-        <MyPagebar></MyPagebar>
-    )
+  return (
+    <div>
+      <MyPagebar />
+      <Container>
+        <Row>
+          <Col>
+            <ProfileMenu />
+          </Col>
+          <Col>
+            <Follower />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 }
