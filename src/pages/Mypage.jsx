@@ -9,10 +9,10 @@ export default function Mypage() {
       <MyPagebar />
       <Container>
         <Row>
-          <Col>
+          <Col md={3}>
             <ProfileMenu />
           </Col>
-          <Col>
+          <Col md={9}>
             <Follower />
           </Col>
         </Row>
