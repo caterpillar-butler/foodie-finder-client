@@ -11,3 +11,4 @@ export { default as FindersPick_user } from './card/FindersPick_user';
 export { default as MyPagebar } from './mypage/MyPagebar';
 export { default as Follower } from './mypage/Follower';
 export { default as ProfileMenu } from './mypage/ProfileMenu';
+export {default as FollowerCard} from './mypage/components/FollowerCard'
